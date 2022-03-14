@@ -3,6 +3,24 @@ import Button from "../Button";
 import './styles.scss'
 
 export default function Navbar() {
+  const listElement = useRef<HTMLUListElement | null>(null)
+
+  function showOptions(e: MouseEvent) {
+    const listOfLi = Array.from(listElement.current?.children!)
+    const liClicked = e.currentTarget
+   
+    listOfLi.forEach(li => {      
+      if (li === liClicked) {
+        liClicked.classList.toggle('active')
+        return;
+      }
+
+      if (li.classList.contains('active')) {
+        li.classList.remove('active')
+      }
+    })
+  }
+
   return (
     <header className="container_header">
       <nav className="wrapper_header">
