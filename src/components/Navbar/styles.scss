@@ -1,0 +1,52 @@
+.container_header {
+  position: fixed;
+  display: grid;
+  place-items: center;
+
+  padding: 2rem 4rem;
+
+  max-width: 100vw;
+  width: 100%;
+  min-height: 4rem;
+
+  z-index: 300;
+
+  background-color: transparent;
+
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+.wrapper_header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > .logo_menu_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 28.875rem;
+    width: 100%;
+  }
+
+  > .buttons_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 2.5rem;
+  color: var(--white);
+
+  > li {
+
+  }
+}
