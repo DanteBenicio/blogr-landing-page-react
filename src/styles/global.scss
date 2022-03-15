@@ -19,6 +19,12 @@ html, #root, body {
   min-height: 100vh;
 }
 
+h1, h2, h3 {
+  color: var(--very-dark-blue);
+  font-family: 'Overpass', sans-serif;
+  font-weight: 600;
+}
+
 :root {
   //& Primary
   --light-red: hsl(356, 100%, 66%);   // CTA text
