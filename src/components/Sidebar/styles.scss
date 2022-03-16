@@ -1,0 +1,66 @@
+.sidebar_container {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    width: 60vw;
+    height: 100vh;
+    right: 0;
+    background-color: var(--white);
+    color: black;
+  }
+}
+
+.sidebar_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .buttons_container {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background: var(--very-light-red-background);
+
+    >.action_buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    > .burger {
+      cursor: pointer;
+    }
+  }
+
+  .sidebar_list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    height: 50vh;
+
+    > .select {
+      width: 100%;
+      padding: 2rem;
+      font-family: 'Ubuntu', sans-serif;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--grayish-blue);
+      }
+
+      svg {
+        margin-left: 0.2rem;
+      }
+      
+    }
+  }
+}
