@@ -9,24 +9,6 @@ type SidebarProps = {
 
 export default function Sidebar({ burger, toggleBurgerValue }: SidebarProps) {
   return (
-  const listRef = useRef<HTMLUListElement | null>(null)
-
-  function showOptions(e: MouseEvent) {
-    const list = Array.from(listRef.current?.children!)
-    const liClicked = e.currentTarget;
-
-    list.forEach(li => {
-      if (li === liClicked) {
-        liClicked.classList.toggle('active');
-        return
-      }
-
-      if (li.classList.contains('active')) {
-        li.classList.remove('active')
-      }
-    })
-  }
-
     <div className="sidebar_container">
       <div className="sidebar_wrapper">
         <div className="buttons_container">
@@ -35,8 +17,8 @@ export default function Sidebar({ burger, toggleBurgerValue }: SidebarProps) {
           </div>
 
           <div className="action_buttons">
-            <Button text="Login" />
-            <Button text="Sign Up" primary/>
+            <a href="#">Login</a>
+            <button className="sign_up_button">Sign Up</button>
           </div>
         </div>
 
