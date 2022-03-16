@@ -1,9 +1,15 @@
+import { MouseEvent, useRef, useState } from "react";
 import { ArrowLight } from "../../svgs/icon-arrow-light";
 import Button from "../Button";
 import './styles.scss'
 
-export default function Navbar() {
-  const listElement = useRef<HTMLUListElement | null>(null)
+type NavbarProps = {
+  burger: boolean
+  toggleBurgerValue: () => void
+}
+
+export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
+  const listElement = useRef<HTMLUListElement | null>(null);
 
   function showOptions(e: MouseEvent) {
     const listOfLi = Array.from(listElement.current?.children!)
@@ -26,21 +32,39 @@ export default function Navbar() {
       <nav className="wrapper_header">
         <div className="logo_menu_wrapper">
           <img src="assets/logo.svg" alt="logo writed blogr" />
-          <ul className="list">
-            <li>
-              <a href="">Product <ArrowLight /></a>
+          <ul ref={listElement} className="list">
+            <li onClick={e => showOptions(e)}>
+              <a href="#">Product <ArrowLight /></a>
+              <div className="options_container">
+                <p className="option">Contact</p>
+                <p className="option">Newsletter</p>
+                <p className="option">LinkedIn</p>
+              </div>
             </li>
-            <li>
-              <a href="">Company <ArrowLight /></a>
+            <li onClick={e => showOptions(e)}>
+              <a href="#">Company <ArrowLight /></a>
+              <div className="options_container">
+                <p className="option">Contact</p>
+                <p className="option">Newsletter</p>
+                <p className="option">LinkedIn</p>
+              </div>
             </li>
-            <li>
-              <a href="">Connect <ArrowLight /></a>
+            <li onClick={e => showOptions(e)}>
+              <a href="#">Connect <ArrowLight /></a>
+              <div className="options_container">
+                <p className="option">Contact</p>
+                <p className="option">Newsletter</p>
+                <p className="option">LinkedIn</p>
+              </div>
             </li>
           </ul>
         </div>
         <div className="buttons_wrapper">
           <a href="#">Login</a>
           <Button text="Sign Up" primary/>
+        </div>
+        <div className={`burger ${burger ? 'active' : ''}`} onClick={toggleBurgerValue}>
+          <img src={burger ? 'assets/icon-close.svg' : 'assets/icon-hamburger.svg'} alt="hamburger image" />
         </div>
       </nav>
     </header>
