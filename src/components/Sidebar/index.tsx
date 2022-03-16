@@ -1,3 +1,4 @@
+import { MouseEvent, useRef } from 'react';
 import { ArrowDark } from '../../svgs/icon-arrow-dark';
 import Button from '../Button';
 import './styles.scss';
