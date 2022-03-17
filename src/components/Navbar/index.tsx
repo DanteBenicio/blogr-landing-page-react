@@ -1,4 +1,4 @@
-import { MouseEvent, useRef } from "react";
+import { useRef } from "react";
 import { ArrowLight } from "../../svgs/icon-arrow-light";
 import { showSubMenu } from "../../utils/showSubMenu";
 import Button from "../Button";
