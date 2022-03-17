@@ -30,6 +30,10 @@
     gap: 2rem;
     max-width: 30.875rem;
     width: 100%;
+
+    > img {
+      aspect-ratio: attr(width) / attr(height);
+    }
   }
 
   > .buttons_wrapper {
@@ -48,11 +52,15 @@
       display: block;
       position: absolute;
       top: 2.5rem;
-      right: 3rem;
+      right: 2.5rem;
 
-      z-index: 500;
+      z-index: 10;
 
       cursor: pointer;
+
+      img {
+        aspect-ratio: attr(width) / attr(height);
+      }
     }
 
     .buttons_wrapper {
@@ -96,7 +104,7 @@
       display: none;
     }
 
-    a {
+    span {
       width: 90px;
 
       svg {
@@ -104,10 +112,14 @@
         margin-left: 0.2rem;
         margin-bottom: 0.125rem;
       }
+
+      &:hover {
+        color: rgb(241, 241, 241);
+      }
     }
 
     &.active {
-      a {
+      span {
         text-decoration: underline;
         font-weight: 700;
 
