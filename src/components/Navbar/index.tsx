@@ -71,7 +71,9 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
           <Button text="Sign Up" primary/>
         </div>
         <div className={`burger ${burger ? 'active' : ''}`} onClick={toggleBurgerValue}>
-          <img src={burger ? 'assets/icon-close.svg' : 'assets/icon-hamburger.svg'} alt="hamburger image" />
+          {!burger && (
+            <img src='assets/icon-hamburger.svg' alt="hamburger image" width="32" height="18" tabIndex={0} aria-label="menu"/>
+          )}
         </div>
       </nav>
     </header>
