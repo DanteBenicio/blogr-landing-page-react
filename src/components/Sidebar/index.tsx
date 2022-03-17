@@ -1,5 +1,6 @@
 import { MouseEvent, useRef } from 'react';
 import { ArrowDark } from '../../svgs/icon-arrow-dark';
+import { showSubMenu } from '../../utils/showSubMenu';
 import './styles.scss';
 
 type SidebarProps = {
