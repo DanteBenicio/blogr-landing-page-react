@@ -1,12 +1,13 @@
 .container_header {
+  position: relative;
   display: grid;
   place-items: center;
-  padding: 2rem 8%;
-  position: relative;
-
+  
   max-width: 100vw;
   width: 100%;
   min-height: 4rem;
+  
+  padding: 2rem 8%;
   margin-bottom: -6.8rem;
 
   z-index: 2;
@@ -17,19 +18,23 @@
 }
 
 .wrapper_header {
-  width: 100%;
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
   align-items: center;
+
+  width: 100%;
+
+  gap: 2rem;
 
   > .logo_menu_wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+
     max-width: 30.875rem;
     width: 100%;
+
+    gap: 2rem;
 
     > img {
       aspect-ratio: attr(width) / attr(height);
@@ -40,6 +45,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     gap: 1rem;
   }
 
@@ -49,8 +55,9 @@
 
   @media screen and (max-width: 768px) {
     .burger {
-      display: block;
       position: absolute;
+      display: block;
+
       top: 2.5rem;
       right: 2.5rem;
 
@@ -88,17 +95,31 @@
 .list {
   display: flex;
   justify-content: space-between;
-  list-style: none;
-  color: var(--white);
+
   max-width: 334px;
   width: 100%;
+
+  list-style: none;
+
+  color: var(--white);
 
   > li {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+
+    border-radius: 0.5rem;
+
+    padding: 0.5rem;
+    
     cursor: pointer;
+    transition: background-color 0.2s ease;
+    
+    &:hover {
+      background-color: rgba(236, 236, 236, 0.123);
+    }
 
     .options_container {
       display: none;
@@ -109,12 +130,9 @@
 
       svg {
         transition: all 0.3s ease;
+
         margin-left: 0.2rem;
         margin-bottom: 0.125rem;
-      }
-
-      &:hover {
-        color: rgb(241, 241, 241);
       }
     }
 
@@ -130,19 +148,20 @@
       }
 
       .options_container {
-        display: block;
         position: absolute;
+        display: block;
+
         width: 150px;
         height: 150px;
+        top: 100%;
+        left: -20%;
+
+        margin-top: 1.5rem;
+  
         animation-name: showCard;
         animation-timing-function: ease-in;
         animation-fill-mode: forwards;
         animation-duration: 0.2s;
-        
-        top: 100%;
-        left: -20%;
-        margin-top: 1.5rem;
-  
         border-radius: 0.5rem;
   
         background-color: white;
@@ -151,8 +170,8 @@
           color: var(--very-dark-gray-blue);
           text-align: center;
           line-height: 3rem;
+          
           cursor: pointer;
-  
           transition: font-weight 0.1s ease-out;
           
           &:hover {
@@ -161,6 +180,5 @@
         }
       }
     }
-
   }
 }
