@@ -10,22 +10,6 @@ type SidebarProps = {
 export default function Sidebar({ burger, toggleBurgerValue }: SidebarProps) {
   const listRef = useRef<HTMLUListElement | null>(null)
 
-  function showOptions(e: MouseEvent) {
-    const list = Array.from(listRef.current?.children!)
-    const liClicked = e.currentTarget;
-
-    list.forEach(li => {
-      if (li === liClicked) {
-        liClicked.classList.toggle('active');
-        return
-      }
-
-      if (li.classList.contains('active')) {
-        li.classList.remove('active')
-      }
-    })
-  }
-
   return (
     <div className="sidebar_container">
       <div className="sidebar_wrapper">
@@ -44,16 +28,18 @@ export default function Sidebar({ burger, toggleBurgerValue }: SidebarProps) {
 
           <div className="action_buttons">
             <a href="#">Login</a>
-            <button 
-              className="sign_up_button" 
-              aria-label="sign up button"
-              role="button"
-            >Sign Up</button>
+            <button className="sign_up_button" aria-label="sign up button" role="button">Sign Up</button>
           </div>
         </div>
 
         <ul className="sidebar_list" ref={listRef!} role="menu" aria-label="menu list">
-          <li className="select" onClick={e => showOptions(e)} role="menuitem" tabIndex={2}>
+          <li 
+            className="select" 
+            onClick={e => showSubMenu(e.currentTarget, listRef.current!)} 
+            role="menuitem" 
+            tabIndex={2}
+            aria-owns="submenu"
+          >
             <span>Product <ArrowDark /></span>
           </li>
           <div className="options_container">
@@ -61,7 +47,13 @@ export default function Sidebar({ burger, toggleBurgerValue }: SidebarProps) {
             <p>Newsletter</p>
             <p>LinkedIn</p>
           </div>
-          <li className="select" onClick={e => showOptions(e)} role="menuitem" tabIndex={3}>
+          <li 
+            className="select" 
+            onClick={e => showSubMenu(e.currentTarget, listRef.current!)} 
+            role="menuitem" 
+            tabIndex={3}
+            aria-owns="submenu"
+          >
             <span>Company <ArrowDark /></span>
           </li>
           <div className="options_container">
@@ -69,7 +61,12 @@ export default function Sidebar({ burger, toggleBurgerValue }: SidebarProps) {
             <p>Newsletter</p>
             <p>LinkedIn</p>
           </div>
-          <li className="select" onClick={e => showOptions(e)} role="menuitem" tabIndex={4}>
+          <li 
+            className="select" onClick={e => showSubMenu(e.currentTarget, listRef.current!)} 
+            role="menuitem" 
+            tabIndex={4}
+            aria-owns="submenu"
+          >
             <span>Connect <ArrowDark /></span>
           </li>
           <div className="options_container">
