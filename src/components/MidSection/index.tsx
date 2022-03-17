@@ -14,6 +14,8 @@ export default function MidSection() {
             src="assets/bg-pattern-circles.svg" 
             alt="phones image"
             className="purple_circle"
+            width="300" 
+            height="300"
           />
         </div>
         <div className="content_wrapper">
