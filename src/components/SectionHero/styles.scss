@@ -1,3 +1,13 @@
+@keyframes rotateSVG {
+  from {
+    transform: rotate(25deg);
+  }
+
+  to {
+    transform: rotate(385deg);
+  }
+}
+
 .container_section_hero {
   display: flex;
   justify-content: center;
@@ -24,12 +34,12 @@
     width: auto;
     display: grid;
     place-items: center;
-    transform: rotate(25deg);
+    animation: rotateSVG 30s linear infinite;
     z-index: 1;
 
     > path {
       position: absolute;
-      transform: scale(0.9);
+      transform: scale(1);
     }
   }
 }
