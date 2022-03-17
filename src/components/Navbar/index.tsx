@@ -36,11 +36,11 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
             alt="logo writed blogr" 
             width="101" 
             height="40" 
-            tabIndex={0} 
-            role="img"
+            tabIndex={1} 
+            aria-label="logo"
           />
-          <ul ref={listElement} className="list" aria-label="menu list" role="menubar">
-            <li onClick={e => showOptions(e)} role="menuitem">
+          <ul ref={listElement} className="list" aria-label="menu list" role="menu">
+            <li onClick={e => showOptions(e)} role="menuitem" aria-owns="submenu" tabIndex={2}>
               <span>Product <ArrowLight /></span>
               <div className="options_container">
                 <p className="option">Contact</p>
@@ -48,7 +48,7 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
                 <p className="option">LinkedIn</p>
               </div>
             </li>
-            <li onClick={e => showOptions(e)} role="menuitem">
+            <li onClick={e => showOptions(e)} role="menuitem" aria-owns="submenu" tabIndex={3}>
               <span>Company <ArrowLight /></span>
               <div className="options_container">
                 <p className="option">Contact</p>
@@ -56,7 +56,7 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
                 <p className="option">LinkedIn</p>
               </div>
             </li>
-            <li onClick={e => showOptions(e)} role="menuitem">
+            <li onClick={e => showOptions(e)} role="menuitem" aria-owns="submenu" tabIndex={4}>
               <span>Connect <ArrowLight /></span>
               <div className="options_container">
                 <p className="option">Contact</p>
@@ -72,7 +72,15 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
         </div>
         <div className={`burger ${burger ? 'active' : ''}`} onClick={toggleBurgerValue}>
           {!burger && (
-            <img src='assets/icon-hamburger.svg' alt="hamburger image" width="32" height="18" tabIndex={0} aria-label="menu"/>
+            <img 
+              src='assets/icon-hamburger.svg' 
+              alt="hamburger image" 
+              width="32" 
+              height="18" 
+              tabIndex={5} 
+              aria-label="menu button"
+              role="menu"
+            />
           )}
         </div>
       </nav>
