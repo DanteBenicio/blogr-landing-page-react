@@ -31,17 +31,29 @@ export default function Sidebar({ burger, toggleBurgerValue }: SidebarProps) {
       <div className="sidebar_wrapper">
         <div className="buttons_container">
           <div className={`burger ${burger ? 'active' : ''}`} onClick={toggleBurgerValue}>
-            <img src={burger ? 'assets/icon-close.svg' : 'assets/icon-hamburger.svg'} alt="hamburger image" />
+            <img 
+              src='assets/icon-close.svg' 
+              alt="hamburger image" 
+              width="26" 
+              height="26" 
+              tabIndex={1}
+              role="menu"
+              aria-label="menu close"
+            />
           </div>
 
           <div className="action_buttons">
             <a href="#">Login</a>
-            <button className="sign_up_button">Sign Up</button>
+            <button 
+              className="sign_up_button" 
+              aria-label="sign up button"
+              role="button"
+            >Sign Up</button>
           </div>
         </div>
 
-        <ul className="sidebar_list" ref={listRef!}>
-          <li className="select" onClick={e => showOptions(e)}>
+        <ul className="sidebar_list" ref={listRef!} role="menu" aria-label="menu list">
+          <li className="select" onClick={e => showOptions(e)} role="menuitem" tabIndex={2}>
             <span>Product <ArrowDark /></span>
           </li>
           <div className="options_container">
@@ -49,7 +61,7 @@ export default function Sidebar({ burger, toggleBurgerValue }: SidebarProps) {
             <p>Newsletter</p>
             <p>LinkedIn</p>
           </div>
-          <li className="select" onClick={e => showOptions(e)}>
+          <li className="select" onClick={e => showOptions(e)} role="menuitem" tabIndex={3}>
             <span>Company <ArrowDark /></span>
           </li>
           <div className="options_container">
@@ -57,7 +69,7 @@ export default function Sidebar({ burger, toggleBurgerValue }: SidebarProps) {
             <p>Newsletter</p>
             <p>LinkedIn</p>
           </div>
-          <li className="select" onClick={e => showOptions(e)}>
+          <li className="select" onClick={e => showOptions(e)} role="menuitem" tabIndex={4}>
             <span>Connect <ArrowDark /></span>
           </li>
           <div className="options_container">
