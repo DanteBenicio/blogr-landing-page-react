@@ -5,18 +5,16 @@
   place-items: center;
   background: linear-gradient(to right, var(--very-dark-gray-blue), var(--very-dark-desaturated-blue));
   border-radius: 0 5.5rem 0 5.5rem;
-  // overflow: hidden;
-  margin-bottom: 6rem;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .mid_section_wrapper {
   position: relative;
   z-index: 0;
   display: flex;
-  justify-content: center;
-  gap: 6rem;
+  justify-content: space-between;
   align-items: center;
+  gap: 6rem;
 
   .images_wrapper {
     > .phones_image {
@@ -24,11 +22,11 @@
       top: -15%;
       left: 5%;
       z-index: 2;
-      max-height: clamp(300px, 50vw, 450px);
+      max-height: clamp(420px, 50vw, 450px);
     }
 
     > .purple_circle {
-      width: 300px;
+      max-width: 300px;
     }
   }
   
@@ -37,7 +35,7 @@
 
 
     > .mid_section_title {
-      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      font-size: clamp(1.6rem, 10vw, 2.4rem);
       color: var(--white);
       margin-bottom: 1rem;
     }
@@ -47,6 +45,58 @@
       font-family: 'Overpass', sans-serif;
       font-weight: 300;
       line-height: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .mid_section_wrapper {
+    flex-direction: column;
+    gap: 2rem;
+
+    .images_wrapper {
+      > .phones_image {
+        left: 50%;
+        transform: translateX(-50%);
+        max-height: clamp(320px, 50vw, 450px);
+      }
+    }
+
+    .content_wrapper {
+      width: 100%;
+      padding: 2rem;
+
+      > .mid_section_title {
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .mid_section_wrapper {
+
+    > .images_wrapper {
+      .phones_image {
+        left: 10%;
+        transform: translateX(-16%);
+      }
+
+      .purple_circle {
+        max-width: 200px;
+      }
+    }
+
+    > .content_wrapper {
+      padding: 0.5rem;
+
+      > p {
+        text-align: center;
+        
+      }
     }
   }
 }
