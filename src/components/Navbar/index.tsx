@@ -36,11 +36,10 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
             alt="logo writed blogr" 
             width="101" 
             height="40" 
-            tabIndex={1} 
             aria-label="logo"
           />
           <ul ref={listElement} className="list" aria-label="menu list" role="menu">
-            <li onClick={e => showOptions(e)} role="menuitem" aria-owns="submenu" tabIndex={2}>
+            <li onClick={e => showOptions(e)} role="menuitem" aria-owns="submenu" tabIndex={1}>
               <span>Product <ArrowLight /></span>
               <div className="options_container">
                 <p className="option">Contact</p>
@@ -48,7 +47,7 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
                 <p className="option">LinkedIn</p>
               </div>
             </li>
-            <li onClick={e => showOptions(e)} role="menuitem" aria-owns="submenu" tabIndex={3}>
+            <li onClick={e => showOptions(e)} role="menuitem" aria-owns="submenu" tabIndex={2}>
               <span>Company <ArrowLight /></span>
               <div className="options_container">
                 <p className="option">Contact</p>
@@ -56,7 +55,7 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
                 <p className="option">LinkedIn</p>
               </div>
             </li>
-            <li onClick={e => showOptions(e)} role="menuitem" aria-owns="submenu" tabIndex={4}>
+            <li onClick={e => showOptions(e)} role="menuitem" aria-owns="submenu" tabIndex={3}>
               <span>Connect <ArrowLight /></span>
               <div className="options_container">
                 <p className="option">Contact</p>
@@ -77,9 +76,9 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
               alt="hamburger image" 
               width="32" 
               height="18" 
-              tabIndex={5} 
+              tabIndex={0} 
               aria-label="menu button"
-              role="menu"
+              role="button"
             />
           )}
         </div>
