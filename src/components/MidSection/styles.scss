@@ -26,7 +26,7 @@
     }
 
     > .purple_circle {
-      max-width: 300px;
+      aspect-ratio: attr(width) / attr(height);
     }
   }
   
@@ -86,7 +86,7 @@
       }
 
       .purple_circle {
-        max-width: 200px;
+        aspect-ratio: attr(width) / attr(height);
       }
     }
 
