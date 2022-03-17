@@ -48,16 +48,16 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
                 <p className="option">LinkedIn</p>
               </div>
             </li>
-            <li onClick={e => showOptions(e)}>
-              <a href="#">Company <ArrowLight /></a>
+            <li onClick={e => showOptions(e)} role="menuitem">
+              <span>Company <ArrowLight /></span>
               <div className="options_container">
                 <p className="option">Contact</p>
                 <p className="option">Newsletter</p>
                 <p className="option">LinkedIn</p>
               </div>
             </li>
-            <li onClick={e => showOptions(e)}>
-              <a href="#">Connect <ArrowLight /></a>
+            <li onClick={e => showOptions(e)} role="menuitem">
+              <span>Connect <ArrowLight /></span>
               <div className="options_container">
                 <p className="option">Contact</p>
                 <p className="option">Newsletter</p>
