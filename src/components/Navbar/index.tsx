@@ -31,10 +31,17 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
     <header className="container_header">
       <nav className="wrapper_header">
         <div className="logo_menu_wrapper">
-          <img src="assets/logo.svg" alt="logo writed blogr" />
-          <ul ref={listElement} className="list">
-            <li onClick={e => showOptions(e)}>
-              <a href="#">Product <ArrowLight /></a>
+          <img 
+            src="assets/logo.svg" 
+            alt="logo writed blogr" 
+            width="101" 
+            height="40" 
+            tabIndex={0} 
+            role="img"
+          />
+          <ul ref={listElement} className="list" aria-label="menu list" role="menubar">
+            <li onClick={e => showOptions(e)} role="menuitem">
+              <span>Product <ArrowLight /></span>
               <div className="options_container">
                 <p className="option">Contact</p>
                 <p className="option">Newsletter</p>
