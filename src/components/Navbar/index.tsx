@@ -1,4 +1,4 @@
-import { MouseEvent, useRef, useState } from "react";
+import { MouseEvent, useRef } from "react";
 import { ArrowLight } from "../../svgs/icon-arrow-light";
 import Button from "../Button";
 import './styles.scss'
