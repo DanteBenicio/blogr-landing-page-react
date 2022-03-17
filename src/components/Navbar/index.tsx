@@ -10,23 +10,7 @@ type NavbarProps = {
 }
 
 export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
-  const listElement = useRef<HTMLUListElement | null>(null);
-
-  function showOptions(e: MouseEvent) {
-    const listOfLi = Array.from(listElement.current?.children!)
-    const liClicked = e.currentTarget
-   
-    listOfLi.forEach(li => {      
-      if (li === liClicked) {
-        liClicked.classList.toggle('active')
-        return;
-      }
-
-      if (li.classList.contains('active')) {
-        li.classList.remove('active')
-      }
-    })
-  }
+  const listRef = useRef<HTMLUListElement | null>(null);
 
   return (
     <header className="container_header">
@@ -39,8 +23,13 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
             height="40" 
             aria-label="logo"
           />
-          <ul ref={listElement} className="list" aria-label="menu list" role="menu">
-            <li onClick={e => showOptions(e)} role="menuitem" aria-owns="submenu" tabIndex={1}>
+          <ul ref={listRef} className="list" aria-label="menu list" role="menu">
+            <li 
+              onClick={e => showSubMenu(e.currentTarget, listRef.current!)} 
+              role="menuitem" 
+              aria-owns="submenu" 
+              tabIndex={1}
+            >
               <span>Product <ArrowLight /></span>
               <div className="options_container">
                 <p className="option">Contact</p>
@@ -48,7 +37,12 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
                 <p className="option">LinkedIn</p>
               </div>
             </li>
-            <li onClick={e => showOptions(e)} role="menuitem" aria-owns="submenu" tabIndex={2}>
+            <li 
+              onClick={e => showSubMenu(e.currentTarget, listRef.current!)} 
+              role="menuitem" 
+              aria-owns="submenu" 
+              tabIndex={2}
+            >
               <span>Company <ArrowLight /></span>
               <div className="options_container">
                 <p className="option">Contact</p>
@@ -56,7 +50,12 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
                 <p className="option">LinkedIn</p>
               </div>
             </li>
-            <li onClick={e => showOptions(e)} role="menuitem" aria-owns="submenu" tabIndex={3}>
+            <li 
+              onClick={e => showSubMenu(e.currentTarget, listRef.current!)} 
+              role="menuitem" 
+              aria-owns="submenu" 
+              tabIndex={3}
+            >
               <span>Connect <ArrowLight /></span>
               <div className="options_container">
                 <p className="option">Contact</p>
