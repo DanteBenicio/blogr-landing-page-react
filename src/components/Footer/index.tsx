@@ -36,6 +36,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <p id="developer_info">Challenge by <a 
+        href="https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        ><strong>FrontEnd Mentor</strong></a> -  Developed by <a href="https://github.com/DanteBenicio" target="_blank" rel="noopener noreferrer"><strong>Dante Benicio ❤️</strong></a></p>
     </footer>
   )
 }
