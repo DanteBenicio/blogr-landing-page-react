@@ -1,0 +1,86 @@
+@keyframes scrollTopAnimation {
+  0% {
+    bottom: 4rem;
+  }
+
+  25% {
+    bottom: 8rem;
+  }
+
+  50% {
+    bottom: 3.6rem
+  }
+
+  75% {
+    bottom: 6rem;
+  }
+
+  90% {
+    bottom: 3.8rem;
+  }
+
+  100% {
+    bottom: 4rem;
+  }
+}
+
+.progress {
+  display: none;
+  place-items: center;
+  position: fixed;
+
+  z-index: 50;
+
+  right: 4rem;
+  bottom: 4rem;
+
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier(0, 1.28, 0.91, 1.38);
+  animation-fill-mode: both;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.5);
+
+  cursor: pointer;
+
+  transition: transform 0.2s linear;
+
+  &:active {
+    transform: scale(1.050);
+  }
+  
+  .progress_value {
+    position: absolute;
+    display: grid;
+    place-items: center;
+
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+
+    background-color: var(--very-dark-black-blue);
+
+    border-radius: 50%;
+    transform: rotate(180deg);
+
+    transition: filter 0.2s linear;
+
+    &:active {
+      filter: brightness(1.2);
+    }
+
+    > svg {
+      transform: scale(2);
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    right: 2.5rem;
+  }
+}
