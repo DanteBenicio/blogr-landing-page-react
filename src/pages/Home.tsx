@@ -19,6 +19,7 @@ export default function Home() {
     <>
       {burger && <Sidebar burger={burger} toggleBurgerValue={toggleBurgerValue}/>}
       <Navbar burger={burger} toggleBurgerValue={toggleBurgerValue}/>
+      <ScrollTopButton reference={scrollTopElementRef!}/>
       <SectionHero />
       <Section {...content1}/>
       <MidSection />
