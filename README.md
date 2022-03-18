@@ -4,7 +4,7 @@
   <h4>Challenge from <a href="https://www.frontendmentor.io/home">Frontend Mentor</a></h4>
   <div align="center">
     <p>
-      <a href="https://blogr-landing-page-indol.vercel.app/">Preview</a> ·
+      <a href="https://blogr-landing-page-indol.vercel.app/" target="_blank">Preview</a> ·
       <a href="https://github.com/DanteBenicio/blogr-landing-page-react/issues">Report Bug</a> ·
       <a href="https://github.com/DanteBenicio/blogr-landing-page-react/pulls">Request Feature</a>
     </p>
