@@ -6,6 +6,7 @@ import Section from '../components/Section'
 import SectionHero from '../components/SectionHero'
 import Sidebar from '../components/Sidebar'
 import { content1, content2 } from '../content'
+import { showScrollTopButton } from '../utils/showScrollTopButton'
 
 export default function Home() {
   const [burger, setBurger] = useState<boolean>(false);
