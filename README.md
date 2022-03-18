@@ -18,7 +18,6 @@
    </p>
 </div>
 
-##
 
 ## ❔ About this Project
 
@@ -28,7 +27,6 @@ This project was developed by me [DanteBenicio](https://github.com/DanteBenicio)
 
 Blogr Landing Page, is a software created to management your website, blog content on a easy way of maintanence.
 
-##
 
 ## ✨ Tecnologies
 
@@ -37,7 +35,6 @@ Blogr Landing Page, is a software created to management your website, blog conte
 - [Typescript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
 
-##
 
 ## 🚀 Run the project
 
