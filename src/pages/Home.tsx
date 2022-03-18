@@ -11,7 +11,9 @@ export default function Home() {
   const [burger, setBurger] = useState<boolean>(false);
 
   const toggleBurgerValue = () => setBurger(prevBurgerValue => !prevBurgerValue);
-  
+
+  window.addEventListener('scroll', () => showScrollTopButton(scrollTopElementRef.current!))
+    
   return (
     <>
       {burger && <Sidebar burger={burger} toggleBurgerValue={toggleBurgerValue}/>}
