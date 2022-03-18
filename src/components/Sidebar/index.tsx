@@ -21,7 +21,7 @@ export default function Sidebar({ burger, toggleBurgerValue }: SidebarProps) {
               alt="hamburger image" 
               width="26" 
               height="26" 
-              tabIndex={1}
+              tabIndex={0}
               role="menu"
               aria-label="menu close"
             />
@@ -38,7 +38,7 @@ export default function Sidebar({ burger, toggleBurgerValue }: SidebarProps) {
             className="select" 
             onClick={e => showSubMenu(e.currentTarget, listRef.current!)} 
             role="menuitem" 
-            tabIndex={2}
+            tabIndex={0}
             aria-owns="submenu"
           >
             <span>Product <ArrowDark /></span>
@@ -52,7 +52,7 @@ export default function Sidebar({ burger, toggleBurgerValue }: SidebarProps) {
             className="select" 
             onClick={e => showSubMenu(e.currentTarget, listRef.current!)} 
             role="menuitem" 
-            tabIndex={3}
+            tabIndex={0}
             aria-owns="submenu"
           >
             <span>Company <ArrowDark /></span>
@@ -65,7 +65,7 @@ export default function Sidebar({ burger, toggleBurgerValue }: SidebarProps) {
           <li 
             className="select" onClick={e => showSubMenu(e.currentTarget, listRef.current!)} 
             role="menuitem" 
-            tabIndex={4}
+            tabIndex={0}
             aria-owns="submenu"
           >
             <span>Connect <ArrowDark /></span>
