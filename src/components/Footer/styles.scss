@@ -1,4 +1,5 @@
 .footer_container {
+  position: relative;
   max-width: 100vw;
   min-height: 50vh;
   text-align: center;
@@ -7,6 +8,37 @@
 
   border-radius: 0 5.5rem 0 0;
   background-color: var(--very-dark-black-blue);
+
+  > #developer_info {
+    position: absolute;
+
+    width: 100%;
+
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    
+    margin-top: 1rem;
+    padding: 0 2rem;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: clamp(0.6rem, 5vw, 0.8rem);
+    line-height: 1rem;
+    color: var(--white);
+
+    strong {
+      font-family: 'Ubuntu';
+      font-weight: 500;
+      color: var(--very-light-red);
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    #developer_info {
+      margin-top: 3rem;
+      font-size: clamp(0.6rem, 5vw, 0.8rem);
+    }
+  }
 }
 
 .footer_wrapper {
@@ -17,6 +49,7 @@
   color: var(--white);
   max-width: 80%;
   gap: 3rem;
+  margin-bottom: 1rem;
 
   > img {
     aspect-ratio: attr(width) / attr(height);
@@ -34,6 +67,9 @@
     gap: 4rem;
 
     .list_wrapper {
+      max-width: 100px;
+      width: 100%;
+
       > p {
         font-family: 'Ubuntu', sans-serif;
         margin-bottom: 2rem;
