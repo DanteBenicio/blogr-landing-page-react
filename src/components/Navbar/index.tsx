@@ -27,8 +27,7 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
             <li 
               onClick={e => showSubMenu(e.currentTarget, listRef.current!)} 
               role="menuitem" 
-              aria-owns="submenu" 
-              tabIndex={1}
+              tabIndex={0}
             >
               <span>Product <ArrowLight /></span>
               <div className="options_container">
@@ -40,8 +39,7 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
             <li 
               onClick={e => showSubMenu(e.currentTarget, listRef.current!)} 
               role="menuitem" 
-              aria-owns="submenu" 
-              tabIndex={2}
+              tabIndex={0}
             >
               <span>Company <ArrowLight /></span>
               <div className="options_container">
@@ -53,8 +51,7 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
             <li 
               onClick={e => showSubMenu(e.currentTarget, listRef.current!)} 
               role="menuitem" 
-              aria-owns="submenu" 
-              tabIndex={3}
+              tabIndex={0}
             >
               <span>Connect <ArrowLight /></span>
               <div className="options_container">
