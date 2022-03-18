@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import Footer from '../components/Footer'
 import MidSection from '../components/MidSection'
 import Navbar from '../components/Navbar'
