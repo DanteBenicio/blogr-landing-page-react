@@ -9,6 +9,7 @@ import { content1, content2 } from '../content'
 
 export default function Home() {
   const [burger, setBurger] = useState<boolean>(false);
+  const scrollTopElementRef = useRef<HTMLDivElement | null>(null)
 
   const toggleBurgerValue = () => setBurger(prevBurgerValue => !prevBurgerValue);
 
