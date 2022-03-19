@@ -4,7 +4,7 @@
   <h4>Challenge from <a href="https://www.frontendmentor.io/home">Frontend Mentor</a></h4>
   <div align="center">
     <p>
-      <a href="https://blogr-landing-page-indol.vercel.app/">Preview</a> ·
+      <a href="https://blogr-landing-page-indol.vercel.app/" target="_blank">Preview</a> ·
       <a href="https://github.com/DanteBenicio/blogr-landing-page-react/issues">Report Bug</a> ·
       <a href="https://github.com/DanteBenicio/blogr-landing-page-react/pulls">Request Feature</a>
     </p>
@@ -18,7 +18,6 @@
    </p>
 </div>
 
-##
 
 ## ❔ About this Project
 
@@ -28,7 +27,6 @@ This project was developed by me [DanteBenicio](https://github.com/DanteBenicio)
 
 Blogr Landing Page, is a software created to management your website, blog content on a easy way of maintanence.
 
-##
 
 ## ✨ Tecnologies
 
@@ -37,7 +35,6 @@ Blogr Landing Page, is a software created to management your website, blog conte
 - [Typescript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
 
-##
 
 ## 🚀 Run the project
 
