@@ -15,7 +15,7 @@ export default function Sidebar({ burger, toggleBurgerValue }: SidebarProps) {
     <div className="sidebar_container">
       <div className="sidebar_wrapper">
         <div className="buttons_container">
-          <div className={`burger ${burger ? 'active' : ''}`} onClick={toggleBurgerValue}>
+          <button className={`burger ${burger ? 'active' : ''}`} onClick={toggleBurgerValue}>
             <img 
               src='assets/icon-close.svg' 
               alt="hamburger image" 
@@ -25,7 +25,7 @@ export default function Sidebar({ burger, toggleBurgerValue }: SidebarProps) {
               role="menu"
               aria-label="menu close"
             />
-          </div>
+          </button>
 
           <div className="action_buttons">
             <a href="#">Login</a>
