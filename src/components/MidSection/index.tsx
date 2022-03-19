@@ -9,6 +9,7 @@ export default function MidSection() {
             src="assets/illustration-phones.svg" 
             alt="phones image"
             className="phones_image"
+            aria-hidden="true"
           />
           <img 
             src="assets/bg-pattern-circles.svg" 
@@ -16,6 +17,7 @@ export default function MidSection() {
             className="purple_circle"
             width="300" 
             height="300"
+            aria-hidden="true"
           />
         </div>
         <div className="content_wrapper">
