@@ -21,7 +21,7 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
             alt="logo writed blogr" 
             width="101" 
             height="40" 
-            aria-label="logo"
+            aria-hidden="true"
           />
           <ul ref={listRef} className="list" aria-label="menu list" role="menu">
             <li 
