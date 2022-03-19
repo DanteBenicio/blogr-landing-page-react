@@ -38,11 +38,13 @@ export default function Section({
               src={desktopImgSrc} 
               alt="editor image for desktop"
               className="section_img desktop"
+              aria-hidden="true"
             />
             <img 
               src={mobileImgSrc} 
               alt="editor image for mobile"
               className="section_img mobile"
+              aria-hidden="true"
             />
           </div>
         </div>
