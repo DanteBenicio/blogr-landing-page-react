@@ -66,7 +66,7 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
           <a href="#">Login</a>
           <Button text="Sign Up" primary/>
         </div>
-        <div className={`burger ${burger ? 'active' : ''}`} onClick={toggleBurgerValue}>
+        <button className={`burger ${burger ? 'active' : ''}`} onClick={toggleBurgerValue}>
           {!burger && (
             <img 
               src='assets/icon-hamburger.svg' 
@@ -78,7 +78,7 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
               role="button"
             />
           )}
-        </div>
+        </button>
       </nav>
     </header>
   )
