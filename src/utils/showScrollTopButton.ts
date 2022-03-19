@@ -14,7 +14,7 @@ export function showScrollTopButton(scrollTopElement: HTMLDivElement) {
     scrollTopElement.style.display = 'none'
   }
 
-  if (scrollValue >= 98 && scrollTopElement) {
+  if (scrollValue >= 96 && scrollTopElement) {
     scrollTopElement.style.animationName = 'scrollTopAnimation'
 
     arrowLight.style.display = 'none'
