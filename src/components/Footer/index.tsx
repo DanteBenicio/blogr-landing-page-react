@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="footer_container">
       <div className="footer_wrapper">
-        <img src="assets/logo.svg" alt="logo writed Blogr" width="80" height="31"/>
+        <img src="assets/logo.svg" alt="logo writed Blogr" width="80" height="31" aria-hidden="true"/>
         <div className="list_group">
           <div className="list_wrapper">
             <p className="list_title">Product</p>
