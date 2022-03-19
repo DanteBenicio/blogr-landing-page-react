@@ -23,7 +23,8 @@
     }
 
     > .burger {
-      cursor: pointer;
+      background: transparent;
+      border: none;
 
       > img {
         aspect-ratio: attr(width) / attr(height);

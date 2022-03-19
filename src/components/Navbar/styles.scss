@@ -51,6 +51,8 @@
 
   > .burger {
     display: none;
+    background: transparent;
+    border: none;
   }
 
   @media screen and (max-width: 768px) {
