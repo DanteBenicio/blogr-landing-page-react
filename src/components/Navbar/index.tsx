@@ -67,9 +67,19 @@ export default function Navbar({ burger, toggleBurgerValue }: NavbarProps) {
           <Button text="Sign Up" primary/>
         </div>
         <button className={`burger ${burger ? 'active' : ''}`} onClick={toggleBurgerValue}>
-          {!burger && (
+          {burger ? (
             <img 
-              src='assets/icon-hamburger.svg' 
+            src='assets/icon-close.svg'
+            alt="hamburger image" 
+            width="26" 
+            height="26" 
+            tabIndex={0} 
+            aria-label="menu button"
+            role="button"
+          />
+          ) : (
+            <img 
+              src='assets/icon-hamburger.svg'
               alt="hamburger image" 
               width="32" 
               height="18" 
