@@ -35,7 +35,7 @@
 
   @media screen and (max-width: 420px) {
     #developer_info {
-      margin-top: 3rem;
+      margin-top: 2.5rem;
       font-size: clamp(0.6rem, 5vw, 0.8rem);
     }
   }
@@ -49,7 +49,7 @@
   color: var(--white);
   max-width: 80%;
   gap: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 
   > img {
     aspect-ratio: attr(width) / attr(height);
